@@ -1,8 +1,8 @@
 name: University Result Checker v3
 
 on:
-  schedule: # execute every 12 hours
-    - cron: "*/5 * * * *"
+  schedule: 
+    - cron: "*/5 */1 * * *"
 
   workflow_dispatch:
 
@@ -13,7 +13,6 @@ on:
 jobs:
   generate:
     permissions:
-      contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
