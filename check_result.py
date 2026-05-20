@@ -25,6 +25,8 @@ def send_telegram_message(message):
         print("Telegram notification sent")
     else:
         print("Telegram notification failed")
+        print("Telegram notification failed")
+        print(response.text)
 
 try:
     response = requests.get(URL, timeout=20)
