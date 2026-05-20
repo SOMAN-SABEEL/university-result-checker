@@ -1,16 +1,21 @@
 name: University Result Checker v3
 
 on:
-  
-  schedule:
-    - cron: '*/5 * * * *'
-    
-  workflow_dispatch:
-  
-jobs:
-  check-result:
-    runs-on: ubuntu-latest
+  schedule: # execute every 12 hours
+    - cron: "* */5 * * *"
 
+  workflow_dispatch:
+
+  push:
+    branches:
+    - main
+
+jobs:
+  generate:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
