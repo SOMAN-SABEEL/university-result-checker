@@ -3,7 +3,7 @@ name: University Result Checker v2
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/3 */12 * * *'
+    - cron: '*/30 * * * *'
 
 jobs:
   check-result:
