@@ -1,10 +1,9 @@
 name: University Result Checker
 
 on:
-  schedule:
-    - cron: "*/2 * * * *"
-
   workflow_dispatch:
+  schedule:
+    - cron: '*/2 * * * *'
 
 jobs:
   check-result:
@@ -17,7 +16,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: '3.11'
 
       - name: Install dependencies
         run: pip install -r requirements.txt
