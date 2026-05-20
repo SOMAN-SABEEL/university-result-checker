@@ -1,4 +1,4 @@
-name: University Result Checker v2
+name: University Result Checker v3
 
 on:
   workflow_dispatch:
