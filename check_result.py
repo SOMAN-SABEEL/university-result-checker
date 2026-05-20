@@ -8,7 +8,7 @@ BOT_TOKEN = os.environ["BOT_TOKEN"]
 CHAT_ID = os.environ["CHAT_ID"]
 
 KEYWORDS = [
-    "B.Ed 3rd semester of Batch 2023"
+    "b. tech 3st semester regular batch 2024 and backlog batches"
 ]
 
 def send_telegram_message(message):
