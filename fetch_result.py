@@ -11,7 +11,7 @@ import os
 NOTICE_URL = "https://egov.uok.edu.in/results/results.aspx?rtype=3&rs=2"
 
 # CHANGE THIS LATER TO 1ST SEM
-TARGET_TEXT = "b. tech 3rd semester regular batch 2024 and backlog batches held in dec 25 - jan 26"
+TARGET_TEXT = "b. tech 1st semester regular batch 2025 and backlog batches held in dec 25 - jan 26"
 
 COLLEGE_CODE = "sme"
 
