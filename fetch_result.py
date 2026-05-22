@@ -108,12 +108,11 @@ def download_pdf():
 
         page.goto(
             NOTICE_URL,
-            timeout=60000
+            timeout=120000,
+            wait_until="domcontentloaded"
         )
 
-        page.wait_for_load_state("networkidle")
-
-        page.wait_for_timeout(5000)
+        page.wait_for_timeout(10000)
 
         print("Searching notification row...")
 
