@@ -95,8 +95,7 @@ def download_pdf():
     with sync_playwright() as p:
 
         browser = p.chromium.launch(
-            headless=False,
-            slow_mo=1000
+            headless=True
         )
 
         context = browser.new_context(
