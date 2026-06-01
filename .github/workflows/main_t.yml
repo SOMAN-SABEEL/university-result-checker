@@ -1,0 +1,36 @@
+name: University Result Checker v6
+
+on:
+  schedule: 
+    - cron: "*/20 */1 * * *"
+
+  workflow_dispatch:
+
+  push:
+    branches:
+    - main
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+        
+      - name: Install Playwright browsers
+        run: python -m playwright install --with-deps chromium
+
+      - name: Run checker script
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN2 }}
+          CHAT_ID: ${{ secrets.CHAT_ID2 }}
+        run: python tanish.py
