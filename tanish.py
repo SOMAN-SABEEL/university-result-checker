@@ -189,9 +189,9 @@ def download_pdf():
 
 def main():
 
-      send_message(
-          "Starting result automation..."
-      )
+    send_message(
+        "Starting result automation..."
+    )
 
     if not notification_exists():
 
