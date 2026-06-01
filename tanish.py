@@ -195,9 +195,9 @@ def main():
 
     if not notification_exists():
 
-        # send_message(
-        #     "Result notification not found"
-        # )
+          send_message(
+              "Result notification not found"
+          )
 
         return
 
